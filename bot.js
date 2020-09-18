@@ -1,29 +1,24 @@
-const Discord = require('discord.js');
+const Commando = require('discord.js-commando');
+const bot = new Commando.Client();
 
-const client = new Discord.Client();
+bot.registry.registerGroup('simple','Simple');
+bot.registry.registerGroup('music','Music');
+bot.registry.registerDefaults();
+bot.registry.registerCommandsIn(__dirname + '/commands');
 
- 
+bot.on('ready',function(){
+    console.log("Ready");
+})
 
-client.on('ready', () => {
+var isReady = true;
 
-    console.log('I am ready!');
+bot.on('message', function(message){
+    if(isReady && message.content == '!hulk')
+    {
+        // message.channel.reply('Hello '+ message.author + ', how are you?');
+      
 
+    }
 });
 
- 
-
-client.on('message', message => {
-
-    if (message.content === 'ping') {
-
-       message.reply('pong');
-
-       }
-
-});
-
- 
-
-// THIS  MUST  BE  THIS  WAY
-
-client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
+bot.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
