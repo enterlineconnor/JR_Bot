@@ -19,6 +19,6 @@ bot.on('message', function(message){
       
 
     }
-});
+}).listen(process.env.PORT || 5000);
 
 bot.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
