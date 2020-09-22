@@ -1,3 +1,5 @@
+var express = require('express');
+var app = express();
 const Commando = require('discord.js-commando');
 const client = new Commando.Client();
 client.registry.registerGroup('simple','Simple');
@@ -20,4 +22,5 @@ client.on('message', function(message){
     }
 });
 
+app.listen(process.env.PORT || 3000);
 client.login(process.env.BOT_TOKEN);
