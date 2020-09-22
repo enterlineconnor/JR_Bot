@@ -18,8 +18,7 @@ class JoinChannelCommand extends commando.Command {
 
                 message.member.voice.channel.join()
                     .then(connection => {
-                        message.reply("HOLY SHIT KING!");
-                        const dispatcher = connection.play('https://www.youtube.com/watch?v=dWpeOSlOTtc');
+                       
                     })
             }
         }

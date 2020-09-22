@@ -2,13 +2,13 @@
 const commando = require('discord.js-commando');
 const ytdl = require('ytdl-core');
 
-class KurtChannelCommand extends commando.Command {
+class KaneChannelCommand extends commando.Command {
     constructor(client) {
         super(client, {
-            name: 'kurt',
+            name: 'kane',
             group: 'music',
-            memberName: 'kurt',
-            description: 'Play Kurt Angle theme'
+            memberName: 'kane',
+            description: 'Play Kane theme'
         });
     }
 
@@ -19,8 +19,8 @@ class KurtChannelCommand extends commando.Command {
 
                 message.member.voice.channel.join()
                     .then(connection => {
-                        message.reply("OH GOD NOT THIS ASS@*&$!");
-                        connection.play(ytdl('https://www.youtube.com/watch?v=jYRKvdEJSJc&t=1s', { filter: 'audioonly' }));
+                        message.reply("*falls out of chair*");
+                        connection.play(ytdl('https://www.youtube.com/watch?v=vlpLYBuTN04', { filter: 'audioonly' }));
                     })
             }
         }
@@ -31,4 +31,4 @@ class KurtChannelCommand extends commando.Command {
     }
 }
 
-module.exports = KurtChannelCommand;
+module.exports = KaneChannelCommand;

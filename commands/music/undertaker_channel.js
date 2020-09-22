@@ -8,7 +8,7 @@ class UndertakerChannelCommand extends commando.Command {
             name: 'taker',
             group: 'music',
             memberName: 'taker',
-            description: 'join channel of commander'
+            description: 'Play The Undertaker theme'
         });
     }
 

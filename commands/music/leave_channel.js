@@ -1,5 +1,6 @@
-const commando = require('discord.js-commando');
+//Currently not working
 
+const commando = require('discord.js-commando');
 class LeaveChannelCommand extends commando.Command {
     constructor(client) {
         super(client, {

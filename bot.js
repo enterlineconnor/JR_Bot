@@ -1,6 +1,5 @@
 const Commando = require('discord.js-commando');
 const client = new Commando.Client();
-
 client.registry.registerGroup('simple','Simple');
 client.registry.registerGroup('music','Music');
 client.registry.registerDefaults();
@@ -13,12 +12,12 @@ client.on('ready',function(){
 var isReady = true;
 
 client.on('message', function(message){
-    if(isReady && message.content == '!hulk')
+    //Example of simple message/reponse to bot
+    if(isReady && message.content == '!Hello')
     {
-        // message.channel.reply('Hello '+ message.author + ', how are you?');
-      
-
+         message.channel.reply('Hello '+ message.author + ', how are you?');
+    
     }
 });
 
-client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
+client.login(process.env.BOT_TOKEN);

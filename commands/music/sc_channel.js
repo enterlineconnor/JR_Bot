@@ -2,13 +2,13 @@
 const commando = require('discord.js-commando');
 const ytdl = require('ytdl-core');
 
-class KurtChannelCommand extends commando.Command {
+class StoneColdChannelCommand extends commando.Command {
     constructor(client) {
         super(client, {
-            name: 'kurt',
+            name: 'sc',
             group: 'music',
-            memberName: 'kurt',
-            description: 'Play Kurt Angle theme'
+            memberName: 'sc',
+            description: 'Play Stone Cold Steve Austin theme'
         });
     }
 
@@ -19,8 +19,8 @@ class KurtChannelCommand extends commando.Command {
 
                 message.member.voice.channel.join()
                     .then(connection => {
-                        message.reply("OH GOD NOT THIS ASS@*&$!");
-                        connection.play(ytdl('https://www.youtube.com/watch?v=jYRKvdEJSJc&t=1s', { filter: 'audioonly' }));
+                        message.reply("STONE COLD, STONE COLD!!!");
+                        connection.play(ytdl('https://www.youtube.com/watch?v=0xrSH0G8kBo', { filter: 'audioonly' }));
                     })
             }
         }
@@ -31,4 +31,4 @@ class KurtChannelCommand extends commando.Command {
     }
 }
 
-module.exports = KurtChannelCommand;
+module.exports = StoneColdChannelCommand;

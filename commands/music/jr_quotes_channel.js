@@ -1,3 +1,4 @@
+//Currently working on more JR voice samples
 
 const commando = require('discord.js-commando');
 const ytdl = require('ytdl-core');

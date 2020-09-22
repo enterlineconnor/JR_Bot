@@ -8,7 +8,7 @@ class HulkChannelCommand extends commando.Command {
             name: 'hulk',
             group: 'music',
             memberName: 'hulk',
-            description: 'join channel of commander'
+            description: 'Play Hulk Hogan theme'
         });
     }
 
